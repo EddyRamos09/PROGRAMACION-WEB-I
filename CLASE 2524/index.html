@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo con Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #35424a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .poster {
+            width: 220px;
+            background-color: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            text-align: center;
+        }
+
+        .poster img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .poster-title {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .poster-description {
+            font-size: 0.9em;
+            color: #666;
+            padding: 0 10px 10px;
+        }
+
+        .content-box {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid blue;
+            box-sizing: content-box;
+            /* Valor por defecto */
+            background-color: lightblue;
+            margin: 10px;
+        }
+
+        .border-box {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid green;
+            box-sizing: border-box;
+            /* Incluye padding y borde */
+            background-color: lightgreen;
+            margin: 10px;
+        }
+
+        footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Página de Ejemplo con Box Model</h1>
+        <p>Bienvenido a nuestra página de demostración con carteles de películas e imagenes</p>
+    </header>
+
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#about">Acerca de</a>
+        <a href="#services">Servicios</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <div class="content">
+        <div class="poster">
+            <img src="https://via.placeholder.com/220x320?text=Imagen+1" alt="imagen 1">
+            <div class="poster-title">Imagen 1</div>
+            <div class="poster-description">Una breve descripción de la Imagen.</div>
+        </div>
+        <div class="poster">
+            <img src="C:\Users\Eddy\Desktop\Documentos y cosas importantes xd\VSCode\Workspace\INTRODUCCION HTML\Workspace\HTML\PROGRAMACION WEB I\CLASE 25-09-24\universo-e1551279332781.jpg"
+                alt="Imagen del universo" height="300">
+            <div class="poster-title">Imagen 2</div>
+            <div class="poster-description">Una breve descripción de la Imagen 2.</div>
+        </div>
+        <div class="content-box">Content Box (Ancho total: 210px)</div>
+        <div class="border-box">Border Box (Ancho total: 200px)</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Página de Ejemplo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
